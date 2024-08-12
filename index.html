@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomization</title>
+    <link rel="icon" href="images.jpg" class="icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="D:\Randomization_ARAI\Old\index1.html"><<</a>
+    <div class="form-container" id="formContainer">
+        <form class="form" id="randomizationForm">
+            <div class="logo-title-container">
+                <div id="logo_div"><a href="https://cmvrta.araiindia.com/#/" target="_blank"><img src="D:\Randomization_ARAI\Original\arai_logo.png" alt="Logo" class="logo"></a></div>
+                <div class="title-container">
+                    <h1 class="custom-title">Randomization</h1>
+                </div>
+            </div><hr>
+            <input type="number" class="styled-input" id="apexNumber" placeholder="Enter Apex Number..." min="10000000" max="99999999" required>
+            <select class="styled-input" id="tableType" onchange="toggleInputs()">
+                <option value="familyTable">Family Table</option>
+                <option value="vinDetails">VIN Details</option>
+            </select><br><br>
+            <div id="familyTableInputs" style="display: none;">
+                <input type="file" id="fileInputFamily" class="fileInput"><br><br>
+            </div>
+            <div id="vinDetailsInputs" style="display: none;">
+                <input type="number" class="styled-input" id="numSelections" placeholder="Enter number of selections..." value="1" min="1" max="20"><br><br>
+                <input type="file" id="fileInputVin" class="fileInput"><br><br>
+            </div>
+            <button type="button" id="randomizeButton" class="custom-button">Randomize</button>
+            <button type="button" id="downloadScreenshot" class="custom-button">Download Screenshot</button>
+            <button type="button" onclick="refreshPage()" class="custom-button">Refresh</button>
+            <div id="table-container"></div>
+            <div id="random-row-container"></div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="working.js"></script>
+</body>
+</html>
